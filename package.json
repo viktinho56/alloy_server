@@ -4,6 +4,7 @@
   "description": "zamel 3pl app server",
   "main": "index.js",
   "scripts": {
+    "test": "mocha",
     "start": "node index"
   },
   "dependencies": {
