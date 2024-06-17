@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "zamel 3pl app server",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "start": "node index"
-  },
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.32.0",
