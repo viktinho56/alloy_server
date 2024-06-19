@@ -53,9 +53,10 @@ router.post("/", async (req, res) => {
 
 router.get("/menu-item/:id", async (req, res) => {
   db.query(
-    `SELECT * FROM foodmenu  N WHERE menuId = ?  ORDER BY id DESC`,[req.params.id],
+    `SELECT N.menuId,N.productId, R.productName,R.productDescription,R.avatarUrl FROM foodmenu  N, products R WHERE N.menuId = ? AND R.id = N.productId  ORDER BY N.id DESC`,
+    [req.params.id],
     function (err, results) {
-      //console.log(err);
+      console.log(err);
       res.send(results);
     }
   );
